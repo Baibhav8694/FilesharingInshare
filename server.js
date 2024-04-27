@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 10000;
 const cors = require('cors');
 
 // ----- connecting the data base ----
@@ -24,6 +24,6 @@ app.use('//files', require('./routes/show'))
 app.use('/files/download/', require('./routes/download'))
 
 
-app.listen(PORT, ()=>{
+app.listen(PORT, '0.0.0.0', ()=>{
     console.log(`Listening on port ${PORT}`)
 })
